@@ -1,0 +1,4 @@
+SlickCarousel
+=============
+
+Slick Carousel demo
