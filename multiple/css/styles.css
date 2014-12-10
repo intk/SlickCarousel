@@ -47,7 +47,19 @@
 }
 
 .inner-slideshow {
-	display: none !important;
+	display: none;
+}
+
+.slideshow {
+	height: 500px;
+}
+
+.inner-slideshow {
+	height: 500px;
+}
+
+.inner-slideshow img {
+	height: 500px;
 }
 
 /* MOBILE */
