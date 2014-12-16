@@ -1,6 +1,9 @@
 /* ------------------------------------------------------------------------------
     S L I D E S H O W - E N H A N C E M E N T S
 --------------------------------------------------------------------------------- */
+
+var last_h = 0;
+
 function recalculateHeight() {
 	h = $(window).height();
 	w = $(window).width();
@@ -20,22 +23,26 @@ function recalculateHeight() {
 			/* Image height is larger than window: resize */	
 			if (img_h > h) {
 				$img.attr("style", "height:"+h+"px; max-width: 100%; width:auto;");
-				$('.slideshow').attr("style", "height:"+h+"px;");
-			} else {
+				last_h = h;
+			} 
+			/* Image height is smaller than window */
+			else {
 				if (img_w < w) {
-					$img.attr("style", "height:"+h+"px; max-width: 100%; width:auto;");
+					if (last_h != h) {
+						$img.attr("style", "height:"+h+"px; max-width: 100%; width:auto;");
+					}
+				} else {
+					$img.attr("style", "width:100%;");
 				}
-				$('.slideshow').attr("style", "height:"+h+"px;");
 			}
-			if (w < img_w) {
-				$img.attr("style", "height:auto;");
-			}
+			$('.slideshow').attr("style", "height:"+h+"px;");
 		} else {
 			$img.load(function() {
-				var img_h = $(this).height();
+				var img_h = $(this).height();				
 				if (img_h > h) {
 					$(this).attr("style", "height:"+h+"px; max-width: 100%; width: auto;");
 					$('.slideshow').attr("style", "height:"+h+"px;");
+					last_h = h;
 				}
 			});
 		}
@@ -54,6 +61,8 @@ $(document).ready(function() {
 	});
 
 	h = $(window).height();
+	last_h = h;
+
 	$('.slideshow').attr("style", "height:"+h+"px;");
 	recalculateHeight();
 
