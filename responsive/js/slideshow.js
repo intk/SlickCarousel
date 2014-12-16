@@ -34,12 +34,13 @@ function resizeImages() {
 
 	$slides.each(function(index) {	
 		$img = $($(this).find('img')[0]);
-		
+		$img.hide();
 		$img.load(function() {
 			var image_h = change_width($(this));
 			if (image_h > h) {
 				change_height($(this));
 			}
+			$img.show();
 		});
 	});
 }
