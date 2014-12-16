@@ -70,10 +70,6 @@ body, .container {
 
 /* Specific */
 
-.slick-slide:not(.slick-active) {
-	visibility: hidden;
-}
-
 .slick-slider {
 	margin-bottom: 0px;
 }

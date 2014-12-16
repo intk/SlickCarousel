@@ -33,7 +33,8 @@ function resizeImages() {
 	$slides = $($slick.$slides);
 
 	$slides.each(function(index) {	
-		$img = $($(this).find('img')[0]);
+		var $img = $($(this).find('img')[0]);
+		
 		$img.hide();
 		$img.load(function() {
 			var image_h = change_width($(this));
@@ -55,7 +56,7 @@ function resizeImage() {
 	$slides = $($slick.$slides);
 
 	$slides.each(function(index) {
-		$img = $($(this).find('img')[0]);
+		var $img = $($(this).find('img')[0]);
 		var image_h = change_width($img);
 		if (image_h > h) {
 			change_height($img);
