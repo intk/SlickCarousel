@@ -17,30 +17,29 @@ function recalculateHeight() {
 		img_w = $img.width();
 
 		if (img_h != 0) {
+			/* Image height is larger than window: resize */	
 			if (img_h > h) {
-				$img.attr("style", "height:"+h+"px;");
+				$img.attr("style", "height:"+h+"px; max-width: 100%; width:auto;");
 				$('.slideshow').attr("style", "height:"+h+"px;");
-			} else if (img_h < h-8 && img_h != 0) {
-				$img.attr("style", "");
-				$('.slideshow').attr("style", "");
+			} else {
+				if (img_w < w) {
+					$img.attr("style", "height:"+h+"px; max-width: 100%; width:auto;");
+				}
+				$('.slideshow').attr("style", "height:"+h+"px;");
 			}
 			if (w < img_w) {
-				console.log("w < img_w");
 				$img.attr("style", "height:auto;");
-				$('.slideshow').attr("style", "");
 			}
 		} else {
 			$img.load(function() {
 				var img_h = $(this).height();
 				if (img_h > h) {
-					$(this).attr("style", "height:"+h+"px;");
+					$(this).attr("style", "height:"+h+"px; max-width: 100%; width: auto;");
 					$('.slideshow').attr("style", "height:"+h+"px;");
 				}
 			});
 		}
 	})
-	
-	
 }
 
 $(document).ready(function() {
@@ -54,6 +53,8 @@ $(document).ready(function() {
 		adaptiveHeight: false
 	});
 
+	h = $(window).height();
+	$('.slideshow').attr("style", "height:"+h+"px;");
 	recalculateHeight();
 
 	$(window).resize(function() {
