@@ -61,8 +61,8 @@ $(document).ready(function() {
 		accessibility: true,
 		dots: false,
 		infinite: true,
-		speed: 0,
-		draggable: false,
+		speed: 500,
+		draggable: true,
 		slidesToShow: 1,
 		lazyLoad: 'progressive',
 		adaptiveHeight: false

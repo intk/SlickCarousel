@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------------------------
+    S L I D E S H O W - E N H A N C E M E N T S
+--------------------------------------------------------------------------------- */
+
+.container {
+	margin: 25px;
+}
+
+.slick-slide img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.slick-slide .image {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: black;
+}

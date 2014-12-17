@@ -1200,13 +1200,10 @@
         if (_.options.rtl === true) {
             position = -position;
         }
-
         x = _.positionProp == 'left' ? position + 'px' : '0px';
         y = _.positionProp == 'top' ? position + 'px' : '0px';
 
         positionProps[_.positionProp] = position;
-
-        console.log(positionProps);
 
         if (_.transformsEnabled === false) {
             _.$slideTrack.css(positionProps);
@@ -1224,6 +1221,7 @@
     };
 
     Slick.prototype.setDimensions = function() {
+
         var _ = this;
 
         if (_.options.vertical === false) {
@@ -1248,6 +1246,7 @@
         if(_.options.vertical === false && _.options.variableWidth === false) {
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
             _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
+
         } else if (_.options.variableWidth === true) {
             var trackWidth = 0;
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
@@ -1261,9 +1260,8 @@
         }
 
         var offset = _.$slides.first().outerWidth(true) - _.$slides.first().width();
-
         if (_.options.variableWidth === false) _.$slideTrack.children('.slick-slide').width(_.slideWidth - offset);
-        
+
     };
 
     Slick.prototype.setFade = function() {
