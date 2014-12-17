@@ -22,8 +22,6 @@ body, .container {
 	padding: 0px;
 }
 
-/* Specific */
-
 .slick-slider {
 	margin-bottom: 0px;
 }
@@ -44,9 +42,8 @@ body, .container {
 	left: 0px;
 }
 
-/* fullscreen */
 
-.inner-bg {
+.slick-active .inner-bg {
   position: relative; 
   top: -50%; 
   left: -50%; 
@@ -54,7 +51,26 @@ body, .container {
   height: 200%;
 }
 
-.inner-bg img {
+.slick-active .inner-bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+
+#bg img {
   position: absolute; 
   top: 0; 
   left: 0; 
