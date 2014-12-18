@@ -28,6 +28,7 @@ body, .container {
 
 .slick-list, .slick-track, .slick-slide {
 	height: 100%;
+  overflow: hidden;
 }
 
 .slick-next:before, .slick-prev:before {

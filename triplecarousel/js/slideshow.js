@@ -4,7 +4,9 @@
 $(document).ready(function() {
 	$(".slideshow").slick({
 		accessibility: true,
-		slidesToShow: 3,
+		slidesToShow: 1,
+		centerMode: true,
+		centerPadding: '60px',
 		dots: false,
 		infinite: true,
 		speed: 500,

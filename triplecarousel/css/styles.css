@@ -7,14 +7,18 @@
 }
 
 .slick-slide img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
 
 .slick-slide .image {
-	margin-left: 10px;
-	margin-right: 10px;
+	
+}
+
+.slick-slide {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .slick-prev:before, .slick-next:before {
