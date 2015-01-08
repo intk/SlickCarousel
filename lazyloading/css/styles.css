@@ -35,14 +35,7 @@ body, .container {
 }
 
 .slick-slide img {
-	position: relative;
-	top: 50%;
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	
 }
 
 .slick-prev:before, .slick-next:before {
