@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------------------
+    S L I D E S H O W - E N H A N C E M E N T S
+--------------------------------------------------------------------------------- */
+
+body, .container {
+	margin: 0px;
+}
+
+.slick-slide img {
+	
+}
+
+.slick-prev:before, .slick-next:before {
+	color: black;
+}
+
+.container {
+	padding: 0px;
+}
+
+/* Specific */
+.slick-list, .slick-track, .slick-slide {
+	height: 100%;
+}
+
+.slick-next:before, .slick-prev:before {
+	color: #ffffff;
+}
+
+.slick-next {
+	right: 0px;
+}
+
+.slick-prev {
+	left: 0px;
+}
+
+.slideshow {
+	height: 700px;
+}
+
+.slideshow img {
+	max-width: 100%;
+	z-index: 100;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.slick-cloned iframe {
+	display: none !important;
+}
+
+#video {
+	display: none;
+	width: 100% !important;
+	height: 100% !important;
+}
